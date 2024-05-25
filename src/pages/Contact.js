@@ -1,9 +1,12 @@
 import React from 'react'
+import Meta from '../components/Meta.js';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
+    <>
+    <Meta title={"Contact"} />
+    </>
+  );
 }
 
 export default Contact
