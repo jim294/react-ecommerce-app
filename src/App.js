@@ -11,6 +11,7 @@ import CompareProduct from "./pages/CompareProduct.js";
 import Wishlist from "./pages/Wishlist.js";
 import Login from "./pages/Login.js";
 import Forgotpassword from "./pages/Forgotpassword.js";
+import Signup from "./pages/Signup.js";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="compare-product" element={<CompareProduct />} />
             <Route path="whishlist" element={<Wishlist />} />
             <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
             <Route path="forgot.password" element={<Forgotpassword />} />
           </Route>
         </Routes>
