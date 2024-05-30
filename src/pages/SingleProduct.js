@@ -3,9 +3,17 @@ import BreadCrumb from "../components/BreadCrumb.js";
 import Meta from "../components/Meta.js";
 import ProductCard from "../components/ProductCard.js";
 import ReactStars from "react-rating-stars-component";
+import ReactImageZoom from "react-image-zoom";
 
 const SingleProduct = () => {
   const [orderedProduct, setorderedProduct] = useState(true);
+  const props = {
+    width: 750,
+    height: 500,
+    zoomWidth: 500,
+    img: "https://www.01net.com/app/uploads/2021/04/Apple-Watch-Series-6.jpg",
+  };
+
   return (
     <>
       <Meta title={"Product Name"} />
@@ -13,7 +21,19 @@ const SingleProduct = () => {
       <div className="main-product-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
-            <div className="col-6"></div>
+            <div className="col-6">
+              <div className="main-product-image">
+                <div>
+                  <ReactImageZoom {...props} />
+                </div>
+              </div>
+              <div className="other-product-images d-flex flex-wrap gap-15">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
             <div className="col-6"></div>
           </div>
         </div>
@@ -22,9 +42,8 @@ const SingleProduct = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-            <h4>Description</h4>
+              <h4>Description</h4>
               <div className="bg-white p-3">
-
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
                   suscipit non beatae? Quos eos saepe atque animi molestiae
@@ -40,7 +59,7 @@ const SingleProduct = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-                <h3>Reviews</h3>
+              <h3>Reviews</h3>
               <div className="review-inner-wrapper">
                 <div className="review-head d-flex justify-content-between align-items-end">
                   <div>
@@ -68,18 +87,18 @@ const SingleProduct = () => {
                   )}
                 </div>
                 <div className="review-form py-4">
-                    <h4>Write a review</h4>
+                  <h4>Write a review</h4>
                   <form action="">
                     <form action="" className="d-flex flex-column gap-15">
-                        <div>
+                      <div>
                         <ReactStars
-                        count={5}
-                        size={24}
-                        value={4}
-                        edit={true}
-                        activeColor="#ffd700"
-                      />
-                        </div>
+                          count={5}
+                          size={24}
+                          value={4}
+                          edit={true}
+                          activeColor="#ffd700"
+                        />
+                      </div>
                       <div>
                         <textarea
                           name=""
@@ -91,25 +110,32 @@ const SingleProduct = () => {
                         ></textarea>
                       </div>
                       <div className="d-flex justify-content-end">
-                        <button className="button border-0">Submit review</button>
+                        <button className="button border-0">
+                          Submit review
+                        </button>
                       </div>
                     </form>
                   </form>
                 </div>
                 <div className="reviews mt-4">
-                    <div className="review">
-<div className="d-flex gap-10 align-items-center">
-    <h6 className="mb-0">Navdeep</h6>
-    <ReactStars
+                  <div className="review">
+                    <div className="d-flex gap-10 align-items-center">
+                      <h6 className="mb-0">Navdeep</h6>
+                      <ReactStars
                         count={5}
                         size={24}
                         value={4}
                         edit={false}
                         activeColor="#ffd700"
                       />
-</div>
-                      <p className="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, eum ratione delectus vel voluptas iure blanditiis accusantium ex dolore ipsum totam culpa nulla sed deserunt dicta excepturi neque dolores. Veniam?</p>
                     </div>
+                    <p className="mt-3">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Id, eum ratione delectus vel voluptas iure blanditiis
+                      accusantium ex dolore ipsum totam culpa nulla sed deserunt
+                      dicta excepturi neque dolores. Veniam?
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
