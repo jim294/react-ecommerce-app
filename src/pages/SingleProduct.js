@@ -10,8 +10,8 @@ const SingleProduct = () => {
   const props = {
     width: 750,
     height: 500,
-    zoomWidth: 500,
-    img: "https://www.01net.com/app/uploads/2021/04/Apple-Watch-Series-6.jpg",
+    zoomWidth: 400,
+    img: "/images/Apple-Watch-Series-6.jpg",
   };
 
   return (
@@ -28,13 +28,35 @@ const SingleProduct = () => {
                 </div>
               </div>
               <div className="other-product-images d-flex flex-wrap gap-15">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
+                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
+                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
+                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
               </div>
             </div>
-            <div className="col-6"></div>
+            <div className="col-6">
+            <div className="main-product-details">
+              <div className="border-bottom">
+                <h3 className="title">
+                  Kids Headphones Bulk 10 Pack Multi Colored For Students
+                </h3>
+              </div>
+              <div className="border-bottom">
+                <p className="price">$ 100</p>
+                <div className="d-flex align-items-center gap-10">
+                <ReactStars
+                        count={5}
+                        size={24}
+                        value={4}
+                        edit={false}
+                        activeColor="#ffd700"
+                      />
+                      <p className="mb-0">(2 Reviews)</p>
+                </div>
+                <a href="#review">Write a review</a>
+              </div>
+            </div>
+            </div>
           </div>
         </div>
       </div>
@@ -59,7 +81,7 @@ const SingleProduct = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <h3>Reviews</h3>
+              <h3 id="review">Reviews</h3>
               <div className="review-inner-wrapper">
                 <div className="review-head d-flex justify-content-between align-items-end">
                   <div>
@@ -86,7 +108,7 @@ const SingleProduct = () => {
                     </div>
                   )}
                 </div>
-                <div className="review-form py-4">
+                <div  className="review-form py-4">
                   <h4>Write a review</h4>
                   <form action="">
                     <form action="" className="d-flex flex-column gap-15">
