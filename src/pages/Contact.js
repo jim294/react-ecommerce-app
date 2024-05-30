@@ -33,7 +33,7 @@ const Contact = () => {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="name"
+                        placeholder="Name"
                       />
                     </div>
                     <div>
