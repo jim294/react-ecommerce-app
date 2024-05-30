@@ -14,6 +14,10 @@ import Forgotpassword from "./pages/Forgotpassword.js";
 import Signup from "./pages/Signup.js";
 import Resetpassword from "./pages/Resetpassword.js";
 import SingleBlog from "./pages/SingleBlog.js";
+import PrivacyPolicy from "./pages/PrivacyPolicy.js";
+import RefundPolicy from "./pages/RefundPolicy.js";
+import ShippingPolicy from "./pages/ShippingPolicy.js";
+import TermAndConditions from "./pages/TermAndConditions.js";
 
 function App() {
   return (
@@ -30,8 +34,13 @@ function App() {
             <Route path="compare-product" element={<CompareProduct />} />
             <Route path="whishlist" element={<Wishlist />} />
             <Route path="login" element={<Login />} />
-            <Route path="signup" element={<Signup />} />
             <Route path="forgot-password" element={<Forgotpassword />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="reset-password" element={<Resetpassword />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="refund-policy" element={<RefundPolicy />} />
+            <Route path="shipping-policy" element={<ShippingPolicy />} />
+            <Route path="term-conditions" element={<TermAndConditions />} />
             <Route path="reset-password" element={<Resetpassword />} />
           </Route>
         </Routes>
