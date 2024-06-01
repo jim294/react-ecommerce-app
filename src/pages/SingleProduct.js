@@ -4,13 +4,16 @@ import Meta from "../components/Meta.js";
 import ProductCard from "../components/ProductCard.js";
 import ReactStars from "react-rating-stars-component";
 import ReactImageZoom from "react-image-zoom";
+import Color from "../components/Color.js";
+import { DiGitCompare } from "react-icons/di";
+import { CiHeart } from "react-icons/ci";
 
 const SingleProduct = () => {
   const [orderedProduct, setorderedProduct] = useState(true);
   const props = {
     width: 750,
-    height: 500,
-    zoomWidth: 400,
+    height: 550,
+    zoomWidth: 600,
     img: "/images/Apple-Watch-Series-6.jpg",
   };
 
@@ -28,34 +31,131 @@ const SingleProduct = () => {
                 </div>
               </div>
               <div className="other-product-images d-flex flex-wrap gap-15">
-                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
-                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
-                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
-                <div><img src="/images/Apple-Watch-Series-6.jpg" className="img-fluid" /></div>
+                <div>
+                  <img
+                    src="/images/Apple-Watch-Series-6.jpg"
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="/images/Apple-Watch-Series-6.jpg"
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="/images/Apple-Watch-Series-6.jpg"
+                    className="img-fluid"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="/images/Apple-Watch-Series-6.jpg"
+                    className="img-fluid"
+                  />
+                </div>
               </div>
             </div>
             <div className="col-6">
-            <div className="main-product-details">
-              <div className="border-bottom">
-                <h3 className="title">
-                  Kids Headphones Bulk 10 Pack Multi Colored For Students
-                </h3>
-              </div>
-              <div className="border-bottom">
-                <p className="price">$ 100</p>
-                <div className="d-flex align-items-center gap-10">
-                <ReactStars
-                        count={5}
-                        size={24}
-                        value={4}
-                        edit={false}
-                        activeColor="#ffd700"
-                      />
-                      <p className="mb-0">(2 Reviews)</p>
+              <div className="main-product-details">
+                <div className="border-bottom">
+                  <h3 className="title">
+                    Kids Headphones Bulk 10 Pack Multi Colored For Students
+                  </h3>
                 </div>
-                <a href="#review">Write a review</a>
+                <div className="border-bottom py-3">
+                  <p className="price">$ 100</p>
+                  <div className="d-flex align-items-center gap-10">
+                    <ReactStars
+                      count={5}
+                      size={24}
+                      value={4}
+                      edit={false}
+                      activeColor="#ffd700"
+                    />
+                    <p className="mb-0 t-review">(2 Reviews)</p>
+                  </div>
+                  <a className="review-btn" href="#review">
+                    Write a review
+                  </a>
+                </div>
+                <div className="border-bottom py-3">
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Type : :</h3>
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Brand :</h3>
+                    <p className="product-data">Havells</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Category :</h3>
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Tags :</h3>
+                    <p className="product-data">Watch</p>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-2">
+                    <h3 className="product-heading">Availablity :</h3>
+                    <p className="product-data">In Stock</p>
+                  </div>
+                  <div className="d-flex gap-10 flex-column mb-2 mb-3">
+                    <h3 className="product-heading">Size :</h3>
+                    <div className="d-flex flex-wrap gap-15">
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        S
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        M
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        L
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XL
+                      </span>
+                      <span className="badge border border-1 bg-white text-dark border-secondary">
+                        XLL
+                      </span>
+                    </div>
+                  </div>
+                  <div className="d-flex gap-10 flex-column mb-2 mb-3">
+                    <h3 className="product-heading">Color :</h3>
+                    <Color />
+                  </div>
+                  <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
+                    <h3 className="product-heading">Quantity :</h3>
+                    <div className="">
+                      <input
+                        type="number"
+                        name=""
+                        min={1}
+                        max={10}
+                        className="form-control"
+                        style={{ width: "70px" }}
+                        id=""
+                      />
+                    </div>
+                    <div className="d-flex align-items-center gap-30 ms-5">
+                      <button className="button border-0" type="submit">
+                        Add to Cart
+                      </button>
+                      <button className="button signup">Buy It Now</button>
+                    </div>
+                  </div>
+                  <div className="d-flex align-items-center gap-15">
+    <div>
+      <a href=""><DiGitCompare className="fs-5 me-2" />Add to Compare</a>
+    </div>
+    <div>
+      <a href=""><CiHeart className="fs-5 me-2" />
+Add to Whislist</a>
+    </div>
+                  </div>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -108,7 +208,7 @@ const SingleProduct = () => {
                     </div>
                   )}
                 </div>
-                <div  className="review-form py-4">
+                <div className="review-form py-4">
                   <h4>Write a review</h4>
                   <form action="">
                     <form action="" className="d-flex flex-column gap-15">
