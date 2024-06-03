@@ -1,7 +1,13 @@
 import React from "react";
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
-
+import prodcompare from "../images/prodcompare.svg"
+import wish from "../images/wish.svg"
+import whishlist from "../images/wishlist.svg"
+import watch from "../images/watch.jpg"
+import watch2 from "../images/watch-01.webp"
+import addcart from "../images/add-cart.svg"
+import view from "../images/view.svg"
 const ProductCard = (props) => {
   const { grid } = props;
   let location = useLocation();
@@ -14,13 +20,13 @@ const ProductCard = (props) => {
         <Link to=':id' className="product-card position-relative">
           <div className="wishlist-icon position-absolute">
             <Link>
-              <img src="images/wish.svg" alt="" />
+              <img src={wish} alt="" />
             </Link>
           </div>
           <div className="product-image">
-            <img src="images/watch.jpg" className="img-fluid" alt="product" />
+            <img src={watch} className="img-fluid" alt="product" />
             <img
-              src="images/watch-01.jpg"
+              src={watch2}
               className="img-fluid"
               alt="product"
             />
