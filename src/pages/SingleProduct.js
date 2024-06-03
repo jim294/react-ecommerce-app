@@ -7,18 +7,19 @@ import ReactImageZoom from "react-image-zoom";
 import Color from "../components/Color.js";
 import { DiGitCompare } from "react-icons/di";
 import { CiHeart } from "react-icons/ci";
+import Container from "../components/Container.js";
 
 const SingleProduct = () => {
   const [orderedProduct, setorderedProduct] = useState(true);
   const copyToClipboard = (text) => {
-    console.log('text', text)
-    var textField = document.createElement('textarea')
-    textField.innerText = text
-    document.body.appendChild(textField)
-    textField.select()
-    document.execCommand('copy')
-    textField.remove()
-  }
+    console.log("text", text);
+    var textField = document.createElement("textarea");
+    textField.innerText = text;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand("copy");
+    textField.remove();
+  };
   const props = {
     width: 750,
     height: 550,
@@ -30,8 +31,7 @@ const SingleProduct = () => {
     <>
       <Meta title={"Product Name"} />
       <BreadCrumb title="Product Name" />
-      <div className="main-product-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      <Container class1="main-product-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-6">
               <div className="main-product-image">
@@ -155,34 +155,44 @@ const SingleProduct = () => {
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-15">
-    <div>
-      <a href=""><DiGitCompare className="fs-5 me-2" />Add to Compare</a>
-    </div>
-    <div>
-      <a href=""><CiHeart className="fs-5 me-2" />
-Add to Whislist</a>
-    </div>
+                    <div>
+                      <a href="">
+                        <DiGitCompare className="fs-5 me-2" />
+                        Add to Compare
+                      </a>
+                    </div>
+                    <div>
+                      <a href="">
+                        <CiHeart className="fs-5 me-2" />
+                        Add to Whislist
+                      </a>
+                    </div>
                   </div>
                   <div className="d-flex gap-10 align-items-center my-3">
                     <h3 className="product-heading">Shipping & Returns :</h3>
                     <p className="product-data">
-                      Free Shipping and returns available on all orders! <br /> We ship all Us domestic orders within <br /> 5-10 business days
+                      Free Shipping and returns available on all orders! <br />{" "}
+                      We ship all Us domestic orders within <br /> 5-10 business
+                      days
                     </p>
                   </div>
                   <div className="d-flex gap-10 flex-column my-3">
                     <h3 className="product-heading">Product Link :</h3>
-                    <a href="javascript:void(0)" onClick={()=>{
-                      copyToClipboard("/images/Apple-Watch-Series-6.jpg")
-                    }}>Copy Product Link</a>
+                    <a
+                      href="javascript:void(0)"
+                      onClick={() => {
+                        copyToClipboard("/images/Apple-Watch-Series-6.jpg");
+                      }}
+                    >
+                      Copy Product Link
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="description-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="description-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-12">
               <h4>Description</h4>
@@ -196,10 +206,8 @@ Add to Whislist</a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <section className="reviews-wrapper home-wrapper-2">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="reviews-wrapper home-wrapper-2">
           <div className="row">
             <div className="col-12">
               <h3 id="review">Reviews</h3>
@@ -283,10 +291,8 @@ Add to Whislist</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="popular-wrapper py-5 home-wrapper-2">
-        <div className="container-xxl">
+      </Container>
+      <Container class1="popular-wrapper py-5 home-wrapper-2">
           <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Our Popular Products</h3>
@@ -295,8 +301,7 @@ Add to Whislist</a>
           <div className="row">
             <ProductCard />
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };

@@ -2,14 +2,13 @@ import React from "react";
 import BreadCrumb from "../components/BreadCrumb.js";
 import Meta from "../components/Meta.js";
 import BlogCard from "../components/BlogCard.js";
-
+import Container from "../components/Container.js";
 const Blog = () => {
   return (
     <>
       <Meta title={"Blogs"} />
       <BreadCrumb title="blogs" />
-      <div className="blog-wrapper home-wrapper-2 py-5">
-        <div className="container-xxl">
+      <Container class1="blog-wrapper home-wrapper-2 py-5">
           <div className="row">
             <div className="col-3">
               <div className="filter-card mb-3">
@@ -41,8 +40,7 @@ const Blog = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+      </Container>
     </>
   );
 };

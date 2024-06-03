@@ -4,14 +4,14 @@ import Meta from "../components/Meta.js";
 import watch from "../images/watch.jpg";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Container from "../components/Container.js";
 
 const Cart = () => {
   return (
     <>
       <Meta title={"Cart"} />
       <BreadCrumb title="Cart" />
-      <section className="cart-wrapper home-wrapper py-5">
-        <div className="container-xxl">
+      <Container class1="cart-wrapper home-wrapper py-5">
           <div className="row">
             <div className="col-12">
               <div className="cart-header py-3 d-flex justify-content-between align-items-center">
@@ -69,8 +69,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Container>
     </>
   );
 };
