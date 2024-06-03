@@ -10,6 +10,15 @@ import { CiHeart } from "react-icons/ci";
 
 const SingleProduct = () => {
   const [orderedProduct, setorderedProduct] = useState(true);
+  const copyToClipboard = (text) => {
+    console.log('text', text)
+    var textField = document.createElement('textarea')
+    textField.innerText = text
+    document.body.appendChild(textField)
+    textField.select()
+    document.execCommand('copy')
+    textField.remove()
+  }
   const props = {
     width: 750,
     height: 550,
@@ -80,7 +89,7 @@ const SingleProduct = () => {
                     Write a review
                   </a>
                 </div>
-                <div className="border-bottom py-3">
+                <div className=" py-3">
                   <div className="d-flex gap-10 align-items-center my-2">
                     <h3 className="product-heading">Type : :</h3>
                     <p className="product-data">Watch</p>
@@ -153,6 +162,18 @@ const SingleProduct = () => {
       <a href=""><CiHeart className="fs-5 me-2" />
 Add to Whislist</a>
     </div>
+                  </div>
+                  <div className="d-flex gap-10 align-items-center my-3">
+                    <h3 className="product-heading">Shipping & Returns :</h3>
+                    <p className="product-data">
+                      Free Shipping and returns available on all orders! <br /> We ship all Us domestic orders within <br /> 5-10 business days
+                    </p>
+                  </div>
+                  <div className="d-flex gap-10 flex-column my-3">
+                    <h3 className="product-heading">Product Link :</h3>
+                    <a href="javascript:void(0)" onClick={()=>{
+                      copyToClipboard("/images/Apple-Watch-Series-6.jpg")
+                    }}>Copy Product Link</a>
                   </div>
                 </div>
               </div>
